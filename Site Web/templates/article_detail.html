@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.titre }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-ad.css') }}">
+</head>
+<body>
+    <div class="article-details">
+        <h1>{{ article.titre }}</h1>
+        <p>{{ article.contenu }}</p>
+        <p>Date de création: {{ article.dateCreation }}</p>
+        <p>Date de modification: {{ article.dateModification }}</p>
+        <p>Catégorie: {{ article.categorie }}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.article-details {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.article-details h1 {
+    margin-top: 0;
+}
+
+.article-details p {
+    color: #666;
+}
+
+.article-details p:last-child {
+    margin-bottom: 0;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+}

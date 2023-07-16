@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Derniers articles</h1>
+    <div class="article-list">
+        {% for article in articles %}
+        <div class="article">
+            {% if article.id is defined %}
+            <h2><a href="{{ url_for('article_detail', article_id=article.id) }}">{{ article.titre }}</a></h2>
+            <p>{{ article.contenu[:200] }}...</p>
+            <p>Date de création: {{ article.dateCreation }}</p>
+            <p>Catégorie: {{ article.categorie }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles par catégorie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-abc.css') }}">
+</head>
+<body>
+    <h1>Articles de la catégorie {{ category_id }}</h1>
+    <div class="article-container">
+        {% for article in articles %}
+        <div class="article">
+            <h2><a href="{{ url_for('article_detail', article_id=article.id) }}">{{ article.titre }}</a></h2>
+            <p>{{ article.contenu[:200] }}...</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
